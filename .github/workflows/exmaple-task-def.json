@@ -5,7 +5,7 @@
    "containerDefinitions": [
        {
            "name": "app-container",
-           "image": "<your-image>:latest",
+           "image": "667053323606.dkr.ecr.us-east-1.amazonaws.com/ci_docker:latest",
            "cpu": 512,
            "memoryReservation": 512,
            "portMappings": [
