@@ -1,3 +1,4 @@
+# \\wsl.localhost\Ubuntu-20.04\home\mesanilaihueang\My_Project\CI_CD\.github\workflows\example-build-docker.yml
 name: Build and Push Docker Image to ECR
 
 on:
@@ -31,9 +32,9 @@ jobs:
     # - name: Get ECR repository URI
       # id: ecr_uri
       # run: echo "REPO_URI=$(aws ecr describe-repositories --repository-names my-repo --query 'repositories[0].repositoryUri' --output text)" >> $GITHUB_ENV
-    # - name: Log in to Amazon ECR
-    #   id: login-ecr
-    #   uses: aws-actions/amazon-ecr-login@v2
+    - name: Log in to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v2
 
     - name: Build, tag, and push Docker image
       env:
